@@ -15,6 +15,7 @@ ${DeviceID}       Rpi3lite
 ${Version}        0.7.0
 ${download_dir}    /Users/glis/Downloads
 ${url_dow}    https://github.com/thin-edge/thin-edge.io/actions
+# testing git
 ${user_git}    gligorisaev@gmail.com
 ${pass_git}    IanIsaev24082021
 ${FILENAME}
