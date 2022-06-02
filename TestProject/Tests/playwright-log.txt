@@ -1,0 +1,78 @@
+{"level":30,"time":"2022-06-01T12:19:32.326Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Listening on 56729"}
+{"level":30,"time":"2022-06-01T12:19:32.442Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:32.443Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:34.723Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:34.723Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:34.729Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:34.729Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:34.731Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:34.732Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.483Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.483Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.485Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.486Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.555Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.555Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.558Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.558Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.563Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.563Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.565Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.565Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:19:40.857Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method newContext"}
+{"level":30,"time":"2022-06-01T12:19:40.858Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"currentBrowser: undefined"}
+{"level":30,"time":"2022-06-01T12:19:41.330Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Trace file: "}
+{"level":30,"time":"2022-06-01T12:19:41.338Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Changed active context"}
+{"level":30,"time":"2022-06-01T12:19:41.338Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method newContext"}
+{"level":30,"time":"2022-06-01T12:19:41.343Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method newPage"}
+{"level":30,"time":"2022-06-01T12:19:41.343Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2022-06-01T12:19:41.513Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Video path: undefined"}
+{"level":30,"time":"2022-06-01T12:19:41.513Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Changed active page"}
+{"level":30,"time":"2022-06-01T12:19:44.414Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method newPage"}
+{"level":30,"time":"2022-06-01T12:19:44.417Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method click"}
+{"level":30,"time":"2022-06-01T12:19:44.418Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Strict mode is enabled, find Locator with //a[normalize-space()='Sign in'] in page."}
+{"level":30,"time":"2022-06-01T12:19:44.727Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method click"}
+{"level":30,"time":"2022-06-01T12:19:44.730Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-06-01T12:19:44.730Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Strict mode is enabled, find Locator with //input[@id='login_field'] in page."}
+{"level":30,"time":"2022-06-01T12:19:44.875Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method fillText"}
+{"level":30,"time":"2022-06-01T12:19:44.878Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-06-01T12:19:44.878Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Strict mode is enabled, find Locator with //input[@id='password'] in page."}
+{"level":30,"time":"2022-06-01T12:19:44.899Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method fillText"}
+{"level":30,"time":"2022-06-01T12:19:44.901Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method click"}
+{"level":30,"time":"2022-06-01T12:19:44.901Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Strict mode is enabled, find Locator with //input[@name='commit'] in page."}
+{"level":30,"time":"2022-06-01T12:19:46.392Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method click"}
+{"level":30,"time":"2022-06-01T12:19:46.395Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-06-01T12:19:46.395Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Strict mode is enabled, find Locator with //input[@placeholder='Filter workflow runs'] in page."}
+{"level":30,"time":"2022-06-01T12:19:46.587Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method fillText"}
+{"level":30,"time":"2022-06-01T12:19:46.590Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method keyboardKey"}
+{"level":30,"time":"2022-06-01T12:19:46.590Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Invoking keyboard action press with params [\"Enter\"]"}
+{"level":30,"time":"2022-06-01T12:19:46.617Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method keyboardKey"}
+{"level":30,"time":"2022-06-01T12:19:46.620Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method click"}
+{"level":30,"time":"2022-06-01T12:19:46.620Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Strict mode is enabled, find Locator with //a[@aria-label='Run 730 of build-workflow. build-workflow'] in page."}
+{"level":30,"time":"2022-06-01T12:19:49.350Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method click"}
+{"level":30,"time":"2022-06-01T12:19:49.353Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method click"}
+{"level":30,"time":"2022-06-01T12:19:49.353Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Strict mode is enabled, find Locator with //a[normalize-space()='debian-packages-aarch64-unknown-linux-gnu'] in page."}
+{"level":30,"time":"2022-06-01T12:19:49.357Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method waitForDownload"}
+{"level":30,"time":"2022-06-01T12:19:51.399Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method click"}
+{"level":30,"time":"2022-06-01T12:20:14.050Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"suggestedFilename: debian-packages-aarch64-unknown-linux-gnu.zip saveAs path: /var/folders/g3/lny5sqfs32qb7kv8lxvh5sqh0000gp/T/playwright-artifacts-sPuQqy/bf32b249-0d36-4fe3-aee1-930ccefe62ef"}
+{"level":30,"time":"2022-06-01T12:20:14.051Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method waitForDownload"}
+{"level":30,"time":"2022-06-01T12:20:37.031Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:20:37.033Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:20:37.036Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Changed active context"}
+{"level":30,"time":"2022-06-01T12:20:37.036Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Changing current active page"}
+{"level":30,"time":"2022-06-01T12:20:37.036Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Changed active page"}
+{"level":30,"time":"2022-06-01T12:20:37.038Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:20:37.040Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:20:37.041Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2022-06-01T12:20:37.041Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2022-06-01T12:20:37.042Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2022-06-01T12:20:37.042Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2022-06-01T12:20:37.045Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Changed active context"}
+{"level":30,"time":"2022-06-01T12:20:37.045Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Changing current active page"}
+{"level":30,"time":"2022-06-01T12:20:37.045Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Changed active page"}
+{"level":30,"time":"2022-06-01T12:20:37.047Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method closeContext"}
+{"level":30,"time":"2022-06-01T12:20:37.058Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method closeContext"}
+{"level":30,"time":"2022-06-01T12:20:37.061Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:20:37.061Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-06-01T12:20:37.094Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2022-06-01T12:20:37.119Z","pid":46719,"hostname":"SAG-C02TV4K6HV2H","msg":"End of node method closeAllBrowsers"}

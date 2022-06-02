@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on darwin)" generated="20220601 15:19:31.134" rpa="false" schemaversion="3">
+<suite id="s1" name="Manual Test" source="/Users/glis/Robot/RobotFramework/TestProject/Tests/manual_test.robot">
+<kw name="Open Connection And Log In" type="SETUP">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>${HOST}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="PASS" starttime="20220601 15:19:32.445" endtime="20220601 15:19:32.446"/>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<msg timestamp="20220601 15:19:32.446" level="INFO">Logging into '192.168.43.48:22' as 'pi'.</msg>
+<msg timestamp="20220601 15:19:34.721" level="INFO">Read output: Linux raspberrypi 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Wed Jun  1 14:16:29 2022 from 192.168.43.190
+[?2004hpi@raspberrypi:~$</msg>
+<status status="PASS" starttime="20220601 15:19:32.446" endtime="20220601 15:19:34.721"/>
+</kw>
+<status status="PASS" starttime="20220601 15:19:32.445" endtime="20220601 15:19:34.721"/>
+</kw>
+<test id="s1-t1" name="Timestamp" line="33">
+<kw name="Create Timestamp">
+<kw name="Get Current Date" library="DateTime">
+<var>${Timestamp}</var>
+<arg>result_format=%d%m%Y%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20220601 15:19:34.726" level="INFO">${Timestamp} = 01062022151934</msg>
+<status status="PASS" starttime="20220601 15:19:34.726" endtime="20220601 15:19:34.726"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Timestamp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220601 15:19:34.727" level="INFO">01062022151934</msg>
+<status status="PASS" starttime="20220601 15:19:34.726" endtime="20220601 15:19:34.727"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Timestamp}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220601 15:19:34.727" level="INFO">${Timestamp} = 01062022151934</msg>
+<status status="PASS" starttime="20220601 15:19:34.727" endtime="20220601 15:19:34.727"/>
+</kw>
+<status status="PASS" starttime="20220601 15:19:34.725" endtime="20220601 15:19:34.728"/>
+</kw>
+<status status="PASS" starttime="20220601 15:19:34.722" endtime="20220601 15:19:34.728"/>
+</test>
+<test id="s1-t2" name="Get build" line="36">
+<kw name="Get Value From User" library="Dialogs">
+<var>${BUILD}</var>
+<arg>Insert Workflow Number (e.g. 716)</arg>
+<doc>Pauses execution and asks user to input a value.</doc>
+<msg timestamp="20220601 15:19:40.480" level="INFO">${BUILD} = 730</msg>
+<status status="PASS" starttime="20220601 15:19:34.733" endtime="20220601 15:19:40.480"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${BUILD}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220601 15:19:40.480" level="INFO">730</msg>
+<status status="PASS" starttime="20220601 15:19:40.480" endtime="20220601 15:19:40.480"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${BUILD}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220601 15:19:40.481" level="INFO">${BUILD} = 730</msg>
+<status status="PASS" starttime="20220601 15:19:40.480" endtime="20220601 15:19:40.481"/>
+</kw>
+<status status="PASS" starttime="20220601 15:19:34.731" endtime="20220601 15:19:40.481"/>
+</test>
+<test id="s1-t3" name="Check Architecture" line="40">
+<kw name="Execute Command" library="SSHLibrary">
+<var>${output}</var>
+<arg>uname -m</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:19:40.488" level="INFO">Executing command 'uname -m'.</msg>
+<msg timestamp="20220601 15:19:40.553" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20220601 15:19:40.553" level="INFO">${output} = aarch64</msg>
+<status status="PASS" starttime="20220601 15:19:40.488" endtime="20220601 15:19:40.553"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${ARCH}</var>
+<arg>${output}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220601 15:19:40.554" level="INFO">${ARCH} = aarch64</msg>
+<status status="PASS" starttime="20220601 15:19:40.553" endtime="20220601 15:19:40.554"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${ARCH}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220601 15:19:40.554" level="INFO">${ARCH} = aarch64</msg>
+<status status="PASS" starttime="20220601 15:19:40.554" endtime="20220601 15:19:40.554"/>
+</kw>
+<status status="PASS" starttime="20220601 15:19:40.485" endtime="20220601 15:19:40.555"/>
+</test>
+<test id="s1-t4" name="Set File Name" line="44">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${ARCH}'=='aarch64'</arg>
+<arg>aarch64</arg>
+<arg>ELSE</arg>
+<arg>armv7</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="aarch64">
+<doc>Setting file name according architecture</doc>
+<kw name="Set Variable" library="BuiltIn">
+<var>${FILENAME}</var>
+<arg>debian-packages-aarch64-unknown-linux-gnu</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220601 15:19:40.561" level="INFO">${FILENAME} = debian-packages-aarch64-unknown-linux-gnu</msg>
+<status status="PASS" starttime="20220601 15:19:40.561" endtime="20220601 15:19:40.561"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${FILENAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220601 15:19:40.561" level="INFO">debian-packages-aarch64-unknown-linux-gnu</msg>
+<status status="PASS" starttime="20220601 15:19:40.561" endtime="20220601 15:19:40.561"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${FILENAME}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220601 15:19:40.562" level="INFO">${FILENAME} = debian-packages-aarch64-unknown-linux-gnu</msg>
+<status status="PASS" starttime="20220601 15:19:40.561" endtime="20220601 15:19:40.562"/>
+</kw>
+<status status="PASS" starttime="20220601 15:19:40.560" endtime="20220601 15:19:40.562"/>
+</kw>
+<status status="PASS" starttime="20220601 15:19:40.560" endtime="20220601 15:19:40.562"/>
+</kw>
+<status status="PASS" starttime="20220601 15:19:40.557" endtime="20220601 15:19:40.562"/>
+</test>
+<test id="s1-t5" name="Check if installation exists on Device" line="47">
+<kw name="Execute Command" library="SSHLibrary">
+<var>${dir}</var>
+<arg>ls /usr/bin | grep tedge_agent</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:19:40.567" level="INFO">Executing command 'ls /usr/bin | grep tedge_agent'.</msg>
+<msg timestamp="20220601 15:19:40.682" level="INFO">Command exited with return code 1.</msg>
+<msg timestamp="20220601 15:19:40.683" level="INFO">${dir} = </msg>
+<status status="PASS" starttime="20220601 15:19:40.567" endtime="20220601 15:19:40.683"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${dir}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220601 15:19:40.683" level="INFO"/>
+<status status="PASS" starttime="20220601 15:19:40.683" endtime="20220601 15:19:40.684"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${dir}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220601 15:19:40.684" level="INFO">${dir} = </msg>
+<status status="PASS" starttime="20220601 15:19:40.684" endtime="20220601 15:19:40.684"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${dir}'=='tedge_agent'</arg>
+<arg>exists</arg>
+<arg>ELSE</arg>
+<arg>doesnt exists</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="doesnt exists">
+<kw name="Execute Command" library="SSHLibrary">
+<arg>rm *.deb</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:19:40.686" level="INFO">Executing command 'rm *.deb'.</msg>
+<msg timestamp="20220601 15:19:40.750" level="INFO">Command exited with return code 0.</msg>
+<status status="PASS" starttime="20220601 15:19:40.686" endtime="20220601 15:19:40.750"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<arg>rm *.zip</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:19:40.750" level="INFO">Executing command 'rm *.zip'.</msg>
+<msg timestamp="20220601 15:19:40.854" level="INFO">Command exited with return code 0.</msg>
+<status status="PASS" starttime="20220601 15:19:40.750" endtime="20220601 15:19:40.854"/>
+</kw>
+<kw name="New Context" library="Browser">
+<arg>acceptDownloads=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20220601 15:19:40.855" level="INFO">{"acceptDownloads": true, "ignoreHTTPSErrors": false, "bypassCSP": false, "deviceScaleFactor": 1.0, "isMobile": false, "hasTouch": false, "javaScriptEnabled": true, "offline": false, "hideRfBrowser": false, "reducedMotion": "no-preference", "forcedColors": "none"}</msg>
+<msg timestamp="20220601 15:19:41.342" level="INFO">Successfully created context. </msg>
+<msg timestamp="20220601 15:19:41.342" level="INFO">{'acceptDownloads': True, 'ignoreHTTPSErrors': False, 'bypassCSP': False, 'deviceScaleFactor': 1, 'isMobile': False, 'hasTouch': False, 'javaScriptEnabled': True, 'offline': False, 'hideRfBrowser': False, 'reducedMotion': 'no-preference', 'forcedColors': 'none'}</msg>
+<msg timestamp="20220601 15:19:41.342" level="INFO">No browser was open. New browser was automatically opened when this context is created.</msg>
+<status status="PASS" starttime="20220601 15:19:40.854" endtime="20220601 15:19:41.342"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url_dow}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20220601 15:19:44.416" level="INFO">Successfully initialized new page object and opened url: https://github.com/thin-edge/thin-edge.io/actions</msg>
+<status status="PASS" starttime="20220601 15:19:41.342" endtime="20220601 15:19:44.416"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//a[normalize-space()='Sign in']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220601 15:19:44.416" endtime="20220601 15:19:44.729"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>//input[@id='login_field']</arg>
+<arg>${user_git}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220601 15:19:44.729" level="INFO">Fills the text 'gligorisaev@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20220601 15:19:44.729" endtime="20220601 15:19:44.877"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>//input[@id='password']</arg>
+<arg>${pass_git}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220601 15:19:44.877" level="INFO">Fills the text 'IanIsaev24082021' in the given field.</msg>
+<status status="PASS" starttime="20220601 15:19:44.877" endtime="20220601 15:19:44.900"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//input[@name='commit']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220601 15:19:44.901" endtime="20220601 15:19:46.394"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>//input[@placeholder='Filter workflow runs']</arg>
+<arg>workflow:build-workflow is:success</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220601 15:19:46.394" level="INFO">Fills the text 'workflow:build-workflow is:success' in the given field.</msg>
+<status status="PASS" starttime="20220601 15:19:46.394" endtime="20220601 15:19:46.589"/>
+</kw>
+<kw name="Keyboard Key" library="Browser">
+<arg>press</arg>
+<arg>Enter</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
+<status status="PASS" starttime="20220601 15:19:46.589" endtime="20220601 15:19:46.619"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//a[@aria-label='Run ${BUILD} of build-workflow. build-workflow']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220601 15:19:46.619" endtime="20220601 15:19:49.352"/>
+</kw>
+<kw name="Promise To Wait For Download" library="Browser">
+<var>${dl_promise}</var>
+<arg>${DIRECTORY}${FILENAME}.zip</arg>
+<tag>BrowserControl</tag>
+<tag>Wait</tag>
+<doc>Returns a promise that waits for next download event on page.</doc>
+<msg timestamp="20220601 15:19:49.353" level="INFO">${dl_promise} = &lt;Future at 0x1059be9e0 state=running&gt;</msg>
+<status status="PASS" starttime="20220601 15:19:49.352" endtime="20220601 15:19:49.353"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//a[normalize-space()='${FILENAME}']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220601 15:19:49.353" endtime="20220601 15:19:51.401"/>
+</kw>
+<kw name="Wait For" library="Browser">
+<var>${file_obj}</var>
+<arg>${dl_promise}</arg>
+<tag>Wait</tag>
+<doc>Waits for promises to finish and returns results from them.</doc>
+<msg timestamp="20220601 15:20:14.052" level="INFO">${file_obj} = {'saveAs': '/var/folders/g3/lny5sqfs32qb7kv8lxvh5sqh0000gp/T/playwright-artifacts-sPuQqy/bf32b249-0d36-4fe3-aee1-930ccefe62ef', 'suggestedFilename': 'debian-packages-aarch64-unknown-linux-gnu.zip'}</msg>
+<status status="PASS" starttime="20220601 15:19:51.401" endtime="20220601 15:20:14.052"/>
+</kw>
+<kw name="Put File" library="SSHLibrary">
+<arg>/Users/glis/Downloads/${FILENAME}.zip</arg>
+<doc>Uploads file(s) from the local machine to the remote machine.</doc>
+<msg timestamp="20220601 15:20:14.123" level="INFO">[chan 5] Opened sftp connection (server version 3)</msg>
+<msg timestamp="20220601 15:20:17.951" level="INFO">'/Users/glis/Downloads/debian-packages-aarch64-unknown-linux-gnu.zip' -&gt; '/home/pi//debian-packages-aarch64-unknown-linux-gnu.zip'</msg>
+<status status="PASS" starttime="20220601 15:20:14.053" endtime="20220601 15:20:17.951"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<arg>unzip ${FILENAME}.zip</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:17.952" level="INFO">Executing command 'unzip debian-packages-aarch64-unknown-linux-gnu.zip'.</msg>
+<msg timestamp="20220601 15:20:17.999" level="INFO">Command exited with return code 9.</msg>
+<status status="PASS" starttime="20220601 15:20:17.951" endtime="20220601 15:20:17.999"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<arg>sudo apt-get --assume-yes install mosquitto</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:18.000" level="INFO">Executing command 'sudo apt-get --assume-yes install mosquitto'.</msg>
+<msg timestamp="20220601 15:20:22.497" level="INFO">Command exited with return code 0.</msg>
+<status status="PASS" starttime="20220601 15:20:18.000" endtime="20220601 15:20:22.497"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<arg>sudo apt-get --assume-yes install libmosquitto1</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:22.498" level="INFO">Executing command 'sudo apt-get --assume-yes install libmosquitto1'.</msg>
+<msg timestamp="20220601 15:20:26.903" level="INFO">Command exited with return code 0.</msg>
+<status status="PASS" starttime="20220601 15:20:22.498" endtime="20220601 15:20:26.903"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<arg>sudo apt-get --assume-yes install collectd-core</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:26.904" level="INFO">Executing command 'sudo apt-get --assume-yes install collectd-core'.</msg>
+<msg timestamp="20220601 15:20:31.356" level="INFO">Command exited with return code 0.</msg>
+<status status="PASS" starttime="20220601 15:20:26.904" endtime="20220601 15:20:31.357"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${output}</var>
+<arg>sudo dpkg -i ./tedge_${Version}_arm*.deb</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:31.357" level="INFO">Executing command 'sudo dpkg -i ./tedge_0.6.4_arm*.deb'.</msg>
+<msg timestamp="20220601 15:20:31.511" level="INFO">Command exited with return code 2.</msg>
+<msg timestamp="20220601 15:20:31.511" level="INFO">${output} = </msg>
+<status status="PASS" starttime="20220601 15:20:31.357" endtime="20220601 15:20:31.512"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${output}</var>
+<arg>sudo dpkg -i ./tedge_mapper_${Version}_arm*.deb</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:31.512" level="INFO">Executing command 'sudo dpkg -i ./tedge_mapper_0.6.4_arm*.deb'.</msg>
+<msg timestamp="20220601 15:20:32.193" level="INFO">Command exited with return code 2.</msg>
+<msg timestamp="20220601 15:20:32.193" level="INFO">${output} = </msg>
+<status status="PASS" starttime="20220601 15:20:31.512" endtime="20220601 15:20:32.193"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${output}</var>
+<arg>sudo dpkg -i ./tedge_agent_${Version}_arm*.deb</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:32.194" level="INFO">Executing command 'sudo dpkg -i ./tedge_agent_0.6.4_arm*.deb'.</msg>
+<msg timestamp="20220601 15:20:32.364" level="INFO">Command exited with return code 2.</msg>
+<msg timestamp="20220601 15:20:32.365" level="INFO">${output} = </msg>
+<status status="PASS" starttime="20220601 15:20:32.194" endtime="20220601 15:20:32.365"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<arg>sudo dpkg -i ./tedge_apama_plugin_${Version}_arm*.deb</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:32.365" level="INFO">Executing command 'sudo dpkg -i ./tedge_apama_plugin_0.6.4_arm*.deb'.</msg>
+<msg timestamp="20220601 15:20:32.551" level="INFO">Command exited with return code 2.</msg>
+<status status="PASS" starttime="20220601 15:20:32.365" endtime="20220601 15:20:32.551"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${output}</var>
+<arg>sudo dpkg -i ./tedge_apt_plugin_${Version}_arm*.deb</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:32.552" level="INFO">Executing command 'sudo dpkg -i ./tedge_apt_plugin_0.6.4_arm*.deb'.</msg>
+<msg timestamp="20220601 15:20:33.047" level="INFO">Command exited with return code 2.</msg>
+<msg timestamp="20220601 15:20:33.047" level="INFO">${output} = </msg>
+<status status="PASS" starttime="20220601 15:20:32.552" endtime="20220601 15:20:33.048"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${output}</var>
+<arg>sudo dpkg -i ./c8y_log_plugin_${Version}_arm*.deb</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:33.048" level="INFO">Executing command 'sudo dpkg -i ./c8y_log_plugin_0.6.4_arm*.deb'.</msg>
+<msg timestamp="20220601 15:20:33.244" level="INFO">Command exited with return code 2.</msg>
+<msg timestamp="20220601 15:20:33.245" level="INFO">${output} = </msg>
+<status status="PASS" starttime="20220601 15:20:33.048" endtime="20220601 15:20:33.245"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${output}</var>
+<arg>sudo dpkg -i ./c8y_configuration_plugin_${Version}_arm*.deb</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:33.245" level="INFO">Executing command 'sudo dpkg -i ./c8y_configuration_plugin_0.6.4_arm*.deb'.</msg>
+<msg timestamp="20220601 15:20:33.388" level="INFO">Command exited with return code 2.</msg>
+<msg timestamp="20220601 15:20:33.388" level="INFO">${output} = </msg>
+<status status="PASS" starttime="20220601 15:20:33.245" endtime="20220601 15:20:33.388"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${output}</var>
+<arg>sudo tedge cert create --device-id ${Timestamp}</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:33.389" level="INFO">Executing command 'sudo tedge cert create --device-id 01062022151934'.</msg>
+<msg timestamp="20220601 15:20:33.516" level="INFO">Command exited with return code 1.</msg>
+<msg timestamp="20220601 15:20:33.516" level="INFO">${output} = </msg>
+<status status="PASS" starttime="20220601 15:20:33.389" endtime="20220601 15:20:33.516"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${output}</var>
+<arg>sudo tedge cert show</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:33.517" level="INFO">Executing command 'sudo tedge cert show'.</msg>
+<msg timestamp="20220601 15:20:33.618" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20220601 15:20:33.618" level="INFO">${output} = Device certificate: /etc/tedge/device-certs/tedge-certificate.pem
+Subject: CN=01062022151630, O=Thin Edge, OU=Test Device
+Issuer: CN=01062022151630, O=Thin Edge, OU=Test Device
+Valid from: Tue, 31 May...</msg>
+<status status="PASS" starttime="20220601 15:20:33.516" endtime="20220601 15:20:33.618"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${output}</arg>
+<arg>Device certificate: /etc/tedge/device-certs/tedge-certificate.pem</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20220601 15:20:33.619" endtime="20220601 15:20:33.619"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${output}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220601 15:20:33.619" level="INFO">Device certificate: /etc/tedge/device-certs/tedge-certificate.pem
+Subject: CN=01062022151630, O=Thin Edge, OU=Test Device
+Issuer: CN=01062022151630, O=Thin Edge, OU=Test Device
+Valid from: Tue, 31 May 2022 12:17:48 +0000
+Valid up to: Wed, 31 May 2023 12:17:48 +0000
+Thumbprint: F8B13E75396A670E644CFCA80CBD2E249522C2F7</msg>
+<status status="PASS" starttime="20220601 15:20:33.619" endtime="20220601 15:20:33.619"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<arg>sudo tedge config set c8y.url gligor.latest.stage.c8y.io</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:33.620" level="INFO">Executing command 'sudo tedge config set c8y.url gligor.latest.stage.c8y.io'.</msg>
+<msg timestamp="20220601 15:20:33.746" level="INFO">Command exited with return code 0.</msg>
+<status status="PASS" starttime="20220601 15:20:33.620" endtime="20220601 15:20:33.746"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<arg>sudo tedge config set c8y.root.cert.path /etc/ssl/certs</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:33.747" level="INFO">Executing command 'sudo tedge config set c8y.root.cert.path /etc/ssl/certs'.</msg>
+<msg timestamp="20220601 15:20:33.842" level="INFO">Command exited with return code 0.</msg>
+<status status="PASS" starttime="20220601 15:20:33.746" endtime="20220601 15:20:33.842"/>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<arg>sudo tedge cert upload c8y --user gligor</arg>
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<msg timestamp="20220601 15:20:33.896" level="INFO">sudo tedge cert upload c8y --user gligor</msg>
+<status status="PASS" starttime="20220601 15:20:33.842" endtime="20220601 15:20:33.896"/>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<arg>Ian@240821</arg>
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<msg timestamp="20220601 15:20:33.906" level="INFO">[?2004lIan@240821</msg>
+<status status="PASS" starttime="20220601 15:20:33.897" endtime="20220601 15:20:33.906"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220601 15:20:36.908" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220601 15:20:33.906" endtime="20220601 15:20:36.908"/>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<var>${output}</var>
+<arg>sudo tedge connect c8y</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20220601 15:20:36.909" level="INFO">Executing command 'sudo tedge connect c8y'.</msg>
+<msg timestamp="20220601 15:20:37.026" level="INFO">Command exited with return code 1.</msg>
+<msg timestamp="20220601 15:20:37.026" level="INFO">${output} = The system config file '/etc/tedge/system.toml' doesn't exist. Use '/bin/systemctl' as a service manager.
+
+Checking if systemd is available.
+
+Checking if configuration for requested bridge already exi...</msg>
+<status status="PASS" starttime="20220601 15:20:36.908" endtime="20220601 15:20:37.026"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${output}</arg>
+<arg>tedge-agent service successfully started and enabled!</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<msg timestamp="20220601 15:20:37.028" level="FAIL">'The system config file '/etc/tedge/system.toml' doesn't exist. Use '/bin/systemctl' as a service manager.
+
+Checking if systemd is available.
+
+Checking if configuration for requested bridge already exists.' does not contain 'tedge-agent service successfully started and enabled!'</msg>
+<status status="FAIL" starttime="20220601 15:20:37.026" endtime="20220601 15:20:37.028"/>
+</kw>
+<status status="FAIL" starttime="20220601 15:19:40.685" endtime="20220601 15:20:37.029"/>
+</kw>
+<status status="FAIL" starttime="20220601 15:19:40.685" endtime="20220601 15:20:37.029"/>
+</kw>
+<status status="FAIL" starttime="20220601 15:19:40.565" endtime="20220601 15:20:37.030">'The system config file '/etc/tedge/system.toml' doesn't exist. Use '/bin/systemctl' as a service manager.
+
+Checking if systemd is available.
+
+Checking if configuration for requested bridge already exists.' does not contain 'tedge-agent service successfully started and enabled!'</status>
+</test>
+<kw name="Close All Connections" library="SSHLibrary" type="TEARDOWN">
+<doc>Closes all open connections.</doc>
+<status status="PASS" starttime="20220601 15:20:37.060" endtime="20220601 15:20:37.060"/>
+</kw>
+<status status="FAIL" starttime="20220601 15:19:31.136" endtime="20220601 15:20:37.060"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="1" skip="0" id="s1" name="Manual Test">Manual Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
